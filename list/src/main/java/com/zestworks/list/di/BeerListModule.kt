@@ -1,6 +1,6 @@
 package com.zestworks.list.di
 
-import com.zestworks.list.BeerListViewModel
+import com.zestworks.list.ui.BeerListViewModel
 import kotlinx.coroutines.Dispatchers
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module

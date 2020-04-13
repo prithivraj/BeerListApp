@@ -1,4 +1,4 @@
-package com.zestworks.list
+package com.zestworks.list.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -9,9 +9,9 @@ import com.zestworks.common.LCE.Content
 import com.zestworks.common.LCE.Error
 import com.zestworks.common.LCE.Loading
 import com.zestworks.data.beerlist.BeerListRepository
-import com.zestworks.list.BeerListViewState.InvalidBeerListViewState
-import com.zestworks.list.BeerListViewState.ValidBeerListViewState
-import com.zestworks.list.ItemStatus.Unassigned
+import com.zestworks.list.ui.BeerListViewState.InvalidBeerListViewState
+import com.zestworks.list.ui.BeerListViewState.ValidBeerListViewState
+import com.zestworks.list.ui.ItemStatus.Unassigned
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.launch
 
@@ -35,7 +35,8 @@ internal class BeerListViewModel(
                 val mutableInput = inputLines.toMutableList()
                 mutableInput.removeAt(0)
                 val inputs = mutableInput.toTypedArray()
-                when (val beerQueue = computeQueue(inputs, numberOfBeers)) {
+                when (val beerQueue =
+                    computeQueue(inputs, numberOfBeers)) {
                     BeerQueue.ImpossibleQueue -> {
                         _beerListState.postValue(Content(InvalidBeerListViewState))
                     }

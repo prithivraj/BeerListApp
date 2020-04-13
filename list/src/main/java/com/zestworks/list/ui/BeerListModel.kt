@@ -1,21 +1,21 @@
-package com.zestworks.list
+package com.zestworks.list.ui
 
-enum class BeerType {
+internal enum class BeerType {
     CLASSIC, BARREL
 }
 
-data class CustomerPreference(
+internal data class CustomerPreference(
     val beerNumber: Int,
     val beerType: BeerType
 )
 
-sealed class ItemStatus {
+internal sealed class ItemStatus {
     object Unassigned : ItemStatus()
     data class Assigned(val beerType: BeerType, val beerNumber: Int) : ItemStatus()
 }
 
 
-sealed class BeerQueue {
+internal sealed class BeerQueue {
     object ImpossibleQueue : BeerQueue()
     data class PossibleQueue(val size: Int, val beerStatus: List<ItemStatus> = List(size) { ItemStatus.Unassigned }) : BeerQueue()
 }

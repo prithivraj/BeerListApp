@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/beerListFragment"
-        android:name="com.zestworks.list.BeerListFragment"
+        android:name="com.zestworks.list.ui.BeerListFragment"
         android:label="fragment_beer_list"
         tools:layout="@layout/fragment_beer_list" />
 </navigation>

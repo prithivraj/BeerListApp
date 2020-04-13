@@ -1,4 +1,4 @@
-package com.zestworks.list
+package com.zestworks.list.ui
 
 internal fun computeQueue(inputs: Array<String>, numberOfBeers: Int): BeerQueue {
     val inputModel = inputs.map { string ->
@@ -39,7 +39,11 @@ internal fun computeQueue(inputs: Array<String>, numberOfBeers: Int): BeerQueue 
         )
     }
 
-    return findBestQueue(BeerQueue.PossibleQueue(numberOfBeers), sortedInputModel, 0)
+    return findBestQueue(
+        BeerQueue.PossibleQueue(
+            numberOfBeers
+        ), sortedInputModel, 0
+    )
 }
 
 private fun findBestQueue(
@@ -58,12 +62,21 @@ private fun findBestQueue(
                 ItemStatus.Unassigned -> {
                     // Now there are 2 cases - when this preference is considered and when this is not
                     val newQueue = currentQueue.beerStatus.toMutableList()
-                    newQueue[it.beerNumber - 1] = ItemStatus.Assigned(it.beerType, it.beerNumber)
+                    newQueue[it.beerNumber - 1] =
+                        ItemStatus.Assigned(
+                            it.beerType,
+                            it.beerNumber
+                        )
                     val copy = currentQueue.copy(beerStatus = newQueue)
                     if (startIndex == customers.size - 1) {
                         return copy
                     } else {
-                        val bestQueueWithThisPref = findBestQueue(copy, customers, startIndex + 1)
+                        val bestQueueWithThisPref =
+                            findBestQueue(
+                                copy,
+                                customers,
+                                startIndex + 1
+                            )
                         if (bestQueueWithThisPref is BeerQueue.PossibleQueue) {
                             return bestQueueWithThisPref
                         }
@@ -75,7 +88,11 @@ private fun findBestQueue(
                         return if (startIndex == customers.size - 1) {
                             queue
                         } else {
-                            findBestQueue(queue, customers, startIndex + 1)
+                            findBestQueue(
+                                queue,
+                                customers,
+                                startIndex + 1
+                            )
                         }
                     } else {
                         return@forEach

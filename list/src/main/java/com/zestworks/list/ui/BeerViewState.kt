@@ -1,4 +1,4 @@
-package com.zestworks.list
+package com.zestworks.list.ui
 
 internal sealed class BeerListViewState {
     data class ValidBeerListViewState(
@@ -7,7 +7,7 @@ internal sealed class BeerListViewState {
     object InvalidBeerListViewState: BeerListViewState()
 }
 
-data class Beer(
+internal data class Beer(
     val imageUrl: String,
     val name: String,
     val abv: Double,

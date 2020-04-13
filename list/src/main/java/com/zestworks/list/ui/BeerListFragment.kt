@@ -1,4 +1,4 @@
-package com.zestworks.list
+package com.zestworks.list.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -6,6 +6,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.zestworks.common.LCE
+import com.zestworks.list.R
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class BeerListFragment : Fragment(R.layout.fragment_beer_list) {
