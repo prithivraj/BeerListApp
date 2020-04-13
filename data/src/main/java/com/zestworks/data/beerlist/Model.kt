@@ -26,7 +26,7 @@ data class BeerListResponseModelItem(
     @SerializedName("ibu")
     val ibu: Float,
     @SerializedName("id")
-    val id: Float,
+    val id: Int,
     @SerializedName("image_url")
     val imageUrl: String,
     @SerializedName("ingredients")

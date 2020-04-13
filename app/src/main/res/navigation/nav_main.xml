@@ -9,5 +9,18 @@
         android:id="@+id/beerListFragment"
         android:name="com.zestworks.list.ui.BeerListFragment"
         android:label="fragment_beer_list"
-        tools:layout="@layout/fragment_beer_list" />
+        tools:layout="@layout/fragment_beer_list" >
+        <action
+            android:id="@+id/action_beerListFragment_to_beerDetailFragment"
+            app:destination="@id/beerDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/beerDetailFragment"
+        android:name="com.zestworks.beerdetail.ui.BeerDetailFragment"
+        android:label="BeerDetailFragment"
+        tools:layout="@layout/fragment_beer_detail">
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="@string/url_beer_detail_deep_link" />
+    </fragment>
 </navigation>

@@ -8,7 +8,7 @@ import com.bumptech.glide.Glide
 import com.zestworks.list.R
 import com.zestworks.list.databinding.BeerListItemBinding
 
-internal class BeerListAdapter(private var items: List<Beer>) :
+internal class BeerListAdapter(private var items: List<Beer>, private val onClick: (Int) -> Unit) :
     RecyclerView.Adapter<BeerListViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BeerListViewHolder {
         return BeerListViewHolder(
@@ -29,6 +29,7 @@ internal class BeerListAdapter(private var items: List<Beer>) :
             beerAbv.text = beer.abv.toString()
             beerType.text = beer.beerType.name
             Glide.with(holder.itemView.context).load(beer.imageUrl).into(beerImage)
+            root.setOnClickListener { onClick(beer.id) }
         }
     }
 

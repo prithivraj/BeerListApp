@@ -8,6 +8,7 @@ internal sealed class BeerListViewState {
 }
 
 internal data class Beer(
+    val id: Int,
     val imageUrl: String,
     val name: String,
     val abv: Double,

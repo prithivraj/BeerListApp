@@ -18,30 +18,35 @@ internal const val dummyCustomerPreference = "5\n" +
 internal val expectedBeers = ValidBeerListViewState(
     listOf(
         Beer(
+            dummyBeerInfo.first().id,
             dummyBeerInfo.first().imageUrl,
             dummyBeerInfo.first().name,
             dummyBeerInfo.first().abv,
             BeerType.CLASSIC
         ),
         Beer(
+            dummyBeerInfo.first().id,
             dummyBeerInfo.first().imageUrl,
             dummyBeerInfo.first().name,
             dummyBeerInfo.first().abv,
             BeerType.CLASSIC
         ),
         Beer(
+            dummyBeerInfo.first().id,
             dummyBeerInfo.first().imageUrl,
             dummyBeerInfo.first().name,
             dummyBeerInfo.first().abv,
             BeerType.CLASSIC
         ),
         Beer(
+            dummyBeerInfo.first().id,
             dummyBeerInfo.first().imageUrl,
             dummyBeerInfo.first().name,
             dummyBeerInfo.first().abv,
             BeerType.CLASSIC
         ),
         Beer(
+            dummyBeerInfo.first().id,
             dummyBeerInfo.first().imageUrl,
             dummyBeerInfo.first().name,
             dummyBeerInfo.first().abv,
@@ -69,30 +74,35 @@ internal const val dummyCustomerPreference2 = "5\n" +
 internal val expectedBeers2 = ValidBeerListViewState(
     listOf(
         Beer(
+            dummyBeerInfo.first().id,
             dummyBeerInfo.first().imageUrl,
             dummyBeerInfo.first().name,
             dummyBeerInfo.first().abv,
             BeerType.CLASSIC
         ),
         Beer(
+            dummyBeerInfo.first().id,
             dummyBeerInfo.first().imageUrl,
             dummyBeerInfo.first().name,
             dummyBeerInfo.first().abv,
             BeerType.BARREL
         ),
         Beer(
+            dummyBeerInfo.first().id,
             dummyBeerInfo.first().imageUrl,
             dummyBeerInfo.first().name,
             dummyBeerInfo.first().abv,
             BeerType.CLASSIC
         ),
         Beer(
+            dummyBeerInfo.first().id,
             dummyBeerInfo.first().imageUrl,
             dummyBeerInfo.first().name,
             dummyBeerInfo.first().abv,
             BeerType.BARREL
         ),
         Beer(
+            dummyBeerInfo.first().id,
             dummyBeerInfo.first().imageUrl,
             dummyBeerInfo.first().name,
             dummyBeerInfo.first().abv,
@@ -108,12 +118,14 @@ internal const val dummyCustomerPreference3 = "2\n" +
 internal val expectedBeers3 = ValidBeerListViewState(
     listOf(
         Beer(
+            dummyBeerInfo.first().id,
             dummyBeerInfo.first().imageUrl,
             dummyBeerInfo.first().name,
             dummyBeerInfo.first().abv,
             BeerType.BARREL
         ),
         Beer(
+            dummyBeerInfo.first().id,
             dummyBeerInfo.first().imageUrl,
             dummyBeerInfo.first().name,
             dummyBeerInfo.first().abv,

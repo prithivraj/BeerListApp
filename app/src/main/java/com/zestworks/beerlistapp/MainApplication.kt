@@ -1,6 +1,7 @@
 package com.zestworks.beerlistapp
 
 import android.app.Application
+import com.zestworks.beerdetail.di.beerDetailModule
 import com.zestworks.data.di.dataModule
 import com.zestworks.list.di.beerListModule
 import org.koin.android.ext.koin.androidContext
@@ -17,7 +18,8 @@ class MainApplication : Application() {
             modules(
                 listOf(
                     dataModule,
-                    beerListModule
+                    beerListModule,
+                    beerDetailModule
                 )
             )
         }

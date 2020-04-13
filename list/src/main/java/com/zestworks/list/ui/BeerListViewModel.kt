@@ -46,6 +46,7 @@ internal class BeerListViewModel(
                             val beerType =
                                 if (itemStatus is Unassigned) BeerType.CLASSIC else (itemStatus as ItemStatus.Assigned).beerType
                             Beer(
+                                id = beerInfo.id,
                                 imageUrl = beerInfo.imageUrl,
                                 name = beerInfo.name,
                                 abv = beerInfo.abv,
