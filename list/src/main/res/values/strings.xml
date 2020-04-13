@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">list</string>
+    <string name="beer_image">Beer Image</string>
 </resources>
