@@ -12,11 +12,11 @@
         android:id="@+id/detailImage"
         android:layout_width="160dp"
         android:layout_height="160dp"
+        android:contentDescription="@string/beer_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars"
-        android:contentDescription="@string/beer_image" />
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/detailName"
@@ -25,16 +25,21 @@
         android:layout_margin="8dp"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/detailAbv"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailImage"
+        app:layout_constraintVertical_chainStyle="spread_inside"
         tools:text="Buzz" />
 
     <TextView
         android:id="@+id/detailAbv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/detailDescription"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailName"
         tools:text="44.0" />
@@ -43,7 +48,9 @@
         android:id="@+id/detailDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/detailHops"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailAbv"
         tools:text="Description" />
@@ -52,7 +59,9 @@
         android:id="@+id/detailHops"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/detailMalts"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailDescription"
         tools:text="Hops" />
@@ -61,7 +70,9 @@
         android:id="@+id/detailMalts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/detailMethods"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailHops"
         tools:text="Malts" />
@@ -70,8 +81,11 @@
         android:id="@+id/detailMethods"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailMalts"
         tools:text="Methods" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

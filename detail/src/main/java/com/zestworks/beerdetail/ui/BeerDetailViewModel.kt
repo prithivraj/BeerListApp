@@ -37,11 +37,11 @@ internal class BeerDetailViewModel(
                             description = beerInfo.description,
                             hops = beerInfo.ingredients.hops.fold(
                                 "",
-                                { acc, hop -> "$acc ${hop.add} ${hop.amount} ${hop.attribute} ${hop.name}" }),
+                                { acc, hop -> "$acc ${hop.add} ${hop.amount.value} ${hop.amount.unit} ${hop.attribute} ${hop.name}" }),
                             malts = beerInfo.ingredients.malt.fold(
                                 "",
-                                { acc, malt -> "$acc ${malt.name} ${malt.amount}" }),
-                            methods = beerInfo.method.toString()
+                                { acc, malt -> "$acc ${malt.name} ${malt.amount.value} ${malt.amount.unit} " }),
+                            methods = "${beerInfo.method.fermentation.temp.value} ${beerInfo.method.fermentation.temp.unit}"
                         )
                     )
                 )
